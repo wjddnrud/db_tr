@@ -1,5 +1,5 @@
 -- biscoff database를 사용하겠다. (한 편집창 제일 상단에 한번만 작성해주면 된다.)
-use biscoff;
+USE biscoff;
 
 -- 중요 별 백개*****************************
 -- 테이블 수정 전에 항상 꼭 반드시 진짜로 ER부터 수정
@@ -35,7 +35,43 @@ DELETE FROM member2 WHERE seq = 2;
 
 -- 컬럼 내용 수정
 -- seq 1번 row에 name, nameEng 컬럼 내용을 바꾼다
-UPDATE member2 SET
+UPDATE member SET
 name = "wookyeong"
-, nameEng = "Great"
+, job = "full stack developer"
 WHERE seq = 1;
+
+
+-- where
+SELECT * FROM member
+WHERE 1=1
+	-- AND name like 'wook%'
+	-- AND name like '%ng'
+    AND name like '%ky%'
+    ;
+
+ 
+SELECT * FROM member
+WHERE 1=1
+	AND name like '%s%'
+    ;
+    
+    SELECT * FROM member
+WHERE 1=1
+	-- way_to_regist = 0
+    -- AND way_to_regist > 1
+    -- AND way_to_regist >=1
+    AND way_to_regist between 0 and 2
+    ;
+
+SELECT * FROM member
+WHERE 1=1
+	-- AND name is null
+    AND name = null
+    ;
+
+SELECT * FROM member
+WHERE 1=1
+	AND name = ""
+    ;
+
+SELECT * FROM member;
