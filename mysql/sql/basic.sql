@@ -75,3 +75,17 @@ WHERE 1=1
     ;
 
 SELECT * FROM member;
+
+-- 임의의 테이블 생성 자동 seq 조건 + 작성, 생성 시간 현재시간으로 자동 입력(메세지) + 제목 공란일시 제목없음 자동 입력
+-- ON UPDATE NOW(); 수정 시간으로 변경 저장/ 디폴트 값이랑 따로 만들어주면 둘다 확인 가능 둘다 하나에 넣으면 최초 저장 시간은 수정 시간으로 덮어써짐!
+CREATE TABLE post2(
+	`seq` INT NOT NULL AUTO_INCREMENT,
+    `createTime` TIMESTAMP NOT NULL DEFAULT NOW(),
+    `editTime` TIMESTAMP NOT NULL ON UPDATE NOW(),
+    `title` VARCHAR(45) NOT NULL DEFAULT '제목없음',
+PRIMARY KEY(`seq`)
+);
+
+
+
+SELECT * FROM post2;
