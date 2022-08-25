@@ -17,6 +17,8 @@ left join cc b on b.ccg_seq = a.seq;
 -- WHERE 
 -- 	a.ccg_name="통신사";
 
+select * from cc;
+
 -- 로그인
 SELECT 
 	id
