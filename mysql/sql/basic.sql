@@ -87,5 +87,18 @@ PRIMARY KEY(`seq`)
 );
 
 
+-- DISTINCT : 중복된 항목 하나로 축약해주는 문법
+-- SELECT문 안에 하나의 컬럼처럼 (SELECT문)을 사용해주는 것을 서브쿼리 or 서브select문이라고 한다. 
+-- (실무에서 group by보다 많이 사용되니 외우고 익히자!)
+-- cc 부분에 aa로 지정해주는것 보단 아예 다른 이름으로 정해주는게 좋다. 
+-- where 부분 작성시 원래 테이블 쪽 먼저 쓰고 그다음 본래 쿼리문 쓰자
+
+SELECT distinct
+	seq
+    ,ccg_name
+    ,useNY
+    ,(SELECT COUNT(ccg_seq) FROM cc where ccg_seq = a.seq) as codeCount
+FROM ccg a;
+
 
 SELECT * FROM post2;
