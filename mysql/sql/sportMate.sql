@@ -6,6 +6,13 @@
 
 use biscoff;
 
+SELECT distinct
+			seq
+	    	,ccg_name
+	    	,useNY
+	   		,(SELECT COUNT(ccg_seq) FROM cc where ccg_seq = a.seq) as xcodeCount
+		FROM ccg a;
+
 -- 공통코드 그룹 
 SELECT
 	a.seq
