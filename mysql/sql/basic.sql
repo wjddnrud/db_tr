@@ -101,4 +101,7 @@ SELECT distinct
 FROM ccg a;
 
 
+-- ALTER TABLE ccg auto_increment = 8; 
+-- auto increment 꼬였을떄 다음으로 추가되는 번호로 초기화 하는법;
+
 SELECT * FROM post2;
