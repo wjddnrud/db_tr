@@ -104,4 +104,9 @@ FROM ccg a;
 -- ALTER TABLE ccg auto_increment = 8; 
 -- auto increment 꼬였을떄 다음으로 추가되는 번호로 초기화 하는법;
 
+
+-- 기존 필드에 DEFAULT 제약 조건을 설정하는 문법
+-- ALTER TABLE 테이블 이름 MODIFY COLUMN 필드이름 필드타입 DEFAULT 기본값;
+-- ALTER TABLE 테이블 이름 ALTER 필드이름 SET DEFAULT 기본값;
+
 SELECT * FROM post2;
