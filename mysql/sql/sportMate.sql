@@ -18,7 +18,7 @@ SELECT
 	a.seq
     ,a.ccg_name
     ,b.cc_key
-    ,b.cc_name
+    ,b.cc_namemember
 FROM ccg a
 left join cc b on b.ccg_seq = a.seq;
 -- WHERE 
