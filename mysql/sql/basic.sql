@@ -109,4 +109,16 @@ FROM ccg a;
 -- ALTER TABLE 테이블 이름 MODIFY COLUMN 필드이름 필드타입 DEFAULT 기본값;
 -- ALTER TABLE 테이블 이름 ALTER 필드이름 SET DEFAULT 기본값;
 
+-- GROUP BY 
+SELECT
+	DNAME
+    ,avg(a.SAL)
+    ,MAX(a.SAL)
+    ,MIN(a.SAL)
+FROM EMP a
+JOIN DEPT aa on aa.DEPTNO = a.DEPTNO
+GROUP BY DNAME
+;
+
+
 SELECT * FROM post2;
